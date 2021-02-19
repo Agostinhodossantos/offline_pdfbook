@@ -42,27 +42,27 @@ public class MainActivity extends AppCompatActivity {
 
 
         //chapter 1
-        topicsList.add( new Topics("Topic 1" , ""));
-        topicsList.add( new Topics("Topic 2" , ""));
-        topicsList.add( new Topics("Topic 3" , ""));
-        topicsList.add( new Topics("Topic 4" , ""));
-        chapterList.add(new Chapter("",topicsList));
+        topicsList.add( new Topics("Topic 1" , "t1"));
+        topicsList.add( new Topics("Topic 2" , "t1"));
+        topicsList.add( new Topics("Topic 3" , "t1"));
+        topicsList.add( new Topics("Topic 4" , "t1"));
+        chapterList.add(new Chapter("Chapter 1",topicsList));
 
         //chapter 2
         topicsList = new ArrayList<>();
-        topicsList.add( new Topics("Topic 1" , ""));
-        topicsList.add( new Topics("Topic 2" , ""));
-        topicsList.add( new Topics("Topic 3" , ""));
-        topicsList.add( new Topics("Topic 4" , ""));
-        chapterList.add(new Chapter("",topicsList));
+        topicsList.add( new Topics("Topic 1" , "t1"));
+        topicsList.add( new Topics("Topic 2" , "t1"));
+        topicsList.add( new Topics("Topic 3" , "t1"));
+        topicsList.add( new Topics("Topic 4" , "t1"));
+        chapterList.add(new Chapter("Chapter 2",topicsList));
 
         //chapter 3
         topicsList = new ArrayList<>();
-        topicsList.add( new Topics("Topic 1" , ""));
-        topicsList.add( new Topics("Topic 2" , ""));
-        topicsList.add( new Topics("Topic 3" , ""));
-        topicsList.add( new Topics("Topic 4" , ""));
-        chapterList.add(new Chapter("",topicsList));
+        topicsList.add( new Topics("Topic 1" , "t1"));
+        topicsList.add( new Topics("Topic 2" , "t1"));
+        topicsList.add( new Topics("Topic 3" , "t1"));
+        topicsList.add( new Topics("Topic 4" , "t1"));
+        chapterList.add(new Chapter("Chapter 3",topicsList));
         sendData();
     }
 }
