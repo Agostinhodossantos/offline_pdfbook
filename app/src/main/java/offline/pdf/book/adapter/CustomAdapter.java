@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -62,8 +63,8 @@ public class CustomAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
 
         view = LayoutInflater.from(context).inflate(R.layout.chapter_item , viewGroup , false);
-
-
+        TextView chapterName = (TextView) view.findViewById(R.id.chapterTitle);
+        chapterName.setText(chapterList.get(i).getChapterName());
         return view;
     }
 
@@ -71,7 +72,8 @@ public class CustomAdapter extends BaseExpandableListAdapter {
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
 
         view = LayoutInflater.from(context).inflate(R.layout.topic_item , viewGroup , false);
-
+        TextView topicName = (TextView) view.findViewById(R.id.topicTitle);
+        topicName.setText(chapterList.get(i).getTopicsList().get(i1).getTopicName());
         return view;
     }
 
