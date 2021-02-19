@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -22,11 +23,25 @@ public class FullView extends AppCompatActivity {
 
 
         pdfView = (PDFView) findViewById(R.id.pdfView);
-
         intent = getIntent();
-        fileName = intent.getStringExtra("fileName");
 
-        pdfView.fromAsset(fileName+".pdf").load();
+        if(intent != null) {
+            fileName = intent.getStringExtra("fileName");
+            if(fileName != null){
+                pdfView.fromAsset(fileName+".pdf").load();
+            }else {
+                toastErro("Ocoreu uma falha");
+                finish();
+            }
+        }else {
+            toastErro("Ocoreu uma falha");
+            finish();
+        }
 
+
+    }
+
+    private void toastErro(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
