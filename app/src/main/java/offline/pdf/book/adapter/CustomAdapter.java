@@ -19,7 +19,10 @@ public class CustomAdapter extends BaseExpandableListAdapter {
     Context context;
 
 
-
+    public CustomAdapter(List<Chapter> chapterList, Context context) {
+        this.chapterList = chapterList;
+        this.context = context;
+    }
 
     //parent size count
     @Override
